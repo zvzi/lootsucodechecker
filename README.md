@@ -1,4 +1,4 @@
-# Da Hood Code Redeemer
+# ROBLOX Da Hood Code Redeemer by lootsu @zvzi on github
 getgenv().host = "host id"
 
 loadstring(game:HttpGet("github.com/zvzi/lootsucodechecker/raw/main/Main.lua"))()
