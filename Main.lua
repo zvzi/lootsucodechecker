@@ -33,7 +33,8 @@ task.wait(2)
 local codes = {
     "2BVIEWS",
     "@DAHOOD",
-    "secretcodeinmain"
+    "secretcodeinmain",
+    "4LEAFCLOVER"
 }
 
 local function redeemCode(code)
