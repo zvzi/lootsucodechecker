@@ -5,7 +5,7 @@ task.spawn(function()
    task.wait(1)
    game.StarterGui:SetCore("SendNotification", {
        Title = "message for host",
-       Text = "even tho you executed this on an alt please make sure you replaced host ID in the script with the account that you want to tell your alts to redeem with",
+       Text = "script broken",
        Duration = 20,
    })
 end)
