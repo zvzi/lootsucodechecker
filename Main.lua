@@ -42,7 +42,7 @@ local codes = {
 local function redeemCode(code)
     for _, c in pairs(codes) do
         if c == code then
-            player.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from chemnas")
+            game.Players.LocalPlayer.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from chemnas")
             game:GetService("ReplicatedStorage").MainEvent:FireServer("EnterPromoCode", code)
             task.wait(0.2)
             return true
@@ -53,7 +53,7 @@ end
 
 game:GetService("Players").PlayerAdded:Connect(function(player)
     player.Chatted:Connect(function(message)
-        if player.UserId == host and string.sub(message, 1, 8) == "!redeem " then
+        if player.UserId == 98537731 and string.sub(message, 1, 8) == "!redeem " then
             local code = string.sub(message, 9)
             if redeemCode(code) then
                 game.Players.LocalPlayer.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from chemnas")
