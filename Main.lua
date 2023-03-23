@@ -1,5 +1,15 @@
 -- made by lootsu idc about skidding but this is the original
 -- dont edit anything wit this script other than the codes unless u know what u doin
+task.spawn(function()
+   repeat task.wait(0.1) until game:IsLoaded()
+   task.wait(1)
+   game.StarterGui:SetCore("SendNotification", {
+       Title = "message for host",
+       Text = "even tho you executed this on an alt please make sure you replaced host ID in the script with the account that you want to tell your alts to redeem with",
+       Duration = 20,
+   })
+end)
+
 if not game:IsLoaded() then
     game.Loaded:Wait()
     task.wait(2)
