@@ -1,4 +1,4 @@
-# lootsucodechecker
+# Da Hood Code Redeemer
 getgenv().host = "host id"
 
 loadstring(game:HttpGet("github.com/zvzi/lootsucodechecker/raw/main/Main.lua"))()
