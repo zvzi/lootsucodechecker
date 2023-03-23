@@ -1,5 +1,3 @@
-
-
 -- made by lootsu idc about skidding but this is the original
 -- dont edit anything wit this script other than the codes unless u know what u doin
 task.spawn(function()
@@ -33,15 +31,15 @@ until player.Character and player.Character:FindFirstChild("Humanoid") and playe
 task.wait(2)
 
 local codes = {
-    "2BLIKES",
+    "2BVIEWS",
     "@DAHOOD",
-    "secretcodemain"
+    "secretcodeinmain"
 }
 
 local function redeemCode(code)
     for _, c in pairs(codes) do
         if c == code then
-            player.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from the host")
+            player.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from " .. host ..)
             game:GetService("ReplicatedStorage").MainEvent:FireServer("EnterPromoCode", code)
             task.wait(0.2)
             return true
@@ -52,10 +50,10 @@ end
 
 game:GetService("Players").PlayerAdded:Connect(function(player)
     player.Chatted:Connect(function(message)
-        if player.UserId == 98537731 and string.sub(message, 1, 8) == "!rdm " then
+        if player.UserId == host and string.sub(message, 1, 8) == "!redeem " then
             local code = string.sub(message, 9)
             if redeemCode(code) then
-                player.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from  the host")
+                player.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from " .. host ..)
             end
         end
     end)
