@@ -1,5 +1,7 @@
 -- made by lootsu idc about skidding but this is the original
--- dont edit anything wit this script other than the codes unless u know what u doin
+-- edit the "chemnas" to be your username"
+
+
 task.spawn(function()
    repeat task.wait(0.1) until game:IsLoaded()
    task.wait(1)
@@ -20,7 +22,7 @@ game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-876.646
 
 repeat
     task.wait(0.25)
-until game:GetService("Players") and game:GetService("Players").LocalPlayer
+until game:GetService("Players") and game:GetService("Players").chemnas
 
 task.wait(1)
 local player = game:GetService("Players").LocalPlayer
@@ -40,7 +42,7 @@ local codes = {
 local function redeemCode(code)
     for _, c in pairs(codes) do
         if c == code then
-            player.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from " .. host ..)
+            player.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from chemnas")
             game:GetService("ReplicatedStorage").MainEvent:FireServer("EnterPromoCode", code)
             task.wait(0.2)
             return true
@@ -54,7 +56,7 @@ game:GetService("Players").PlayerAdded:Connect(function(player)
         if player.UserId == host and string.sub(message, 1, 8) == "!redeem " then
             local code = string.sub(message, 9)
             if redeemCode(code) then
-                player.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from " .. host ..)
+                game.Players.LocalPlayer.Character.HumanoidRootPart.ChatRemote:FireServer("redeemed code " .. code .. " from chemnas")
             end
         end
     end)
